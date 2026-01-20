@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ) {
       document.getElementById("adm").style.visibility = "visible";
       localStorage.setItem("logged", "1");
-    } else {
-      alert("Usuário ou senha incorretos");
     }
   };
   if (localStorage.getItem("logged") === "1") {
@@ -26,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   titles.forEach((title) => {
     title.addEventListener("click", (e) => {
-      console.log("clicado");
       e.preventDefault();
 
       const target = title.dataset.target;
